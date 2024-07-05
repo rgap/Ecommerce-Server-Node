@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Martillo de Uña",
+    "description": "Martillo de uña con mango de madera, ideal para clavar y extraer clavos. Cabeza de acero de alta calidad.",
+    "code": "HAM1",
+    "price": 12.99,
+    "status": true,
+    "stock": 50,
+    "category": "Herramientas Manuales",
+    "thumbnails": [
+      "images/martillo_unia_1.jpg",
+      "images/martillo_unia_2.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Taladro Eléctrico",
+    "description": "Taladro eléctrico de 600W con función percutora. Incluye un set de brocas para diferentes materiales.",
+    "code": "DRL1",
+    "price": 79.99,
+    "status": true,
+    "stock": 30,
+    "category": "Herramientas Eléctricas",
+    "thumbnails": [
+      "images/taladro_electrico_1.jpg",
+      "images/taladro_electrico_2.jpg"
+    ]
+  }
+]

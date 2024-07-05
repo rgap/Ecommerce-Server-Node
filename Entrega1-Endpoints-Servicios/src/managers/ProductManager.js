@@ -25,7 +25,7 @@ class ProductManager {
     try {
       const data = await fs.promises.readFile(this.filePath, "utf-8");
       const products = JSON.parse(data);
-      const productFound = products.find(product => product.id === Number(productId));
+      const productFound = products.find(product => Number(product.id) == Number(productId));
       return productFound;
     } catch (error) {
       console.error("Error reading product:", error);
@@ -51,7 +51,7 @@ class ProductManager {
     try {
       const data = await fs.promises.readFile(this.filePath, "utf-8");
       const products = JSON.parse(data);
-      const index = products.findIndex(product => product.id === Number(productId));
+      const index = products.findIndex(product => Number(product.id) == Number(productId));
       if (index !== -1) {
         products[index] = { ...products[index], ...updatedProduct };
         await fs.promises.writeFile(this.filePath, JSON.stringify(products, null, 2));
@@ -68,7 +68,7 @@ class ProductManager {
     try {
       const data = await fs.promises.readFile(this.filePath, "utf-8");
       let products = JSON.parse(data);
-      products = products.filter(product => product.id !== Number(productId));
+      products = products.filter(product => Number(product.id) != Number(productId));
       await fs.promises.writeFile(this.filePath, JSON.stringify(products, null, 2));
       return true;
     } catch (error) {

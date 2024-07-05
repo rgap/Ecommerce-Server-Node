@@ -27,4 +27,14 @@ router.get("/:cartId", async (req, res) => {
   }
 });
 
+router.post("/:cartId/product/:productId", async (req, res) => {
+  const { cartId, productId } = req.params;
+  const cart = await cartManager.addProductToCart(cartId, productId);
+  if (cart) {
+    res.json(cart);
+  } else {
+    res.status(404).json({ message: "Cart not found" });
+  }
+});
+
 export default router;

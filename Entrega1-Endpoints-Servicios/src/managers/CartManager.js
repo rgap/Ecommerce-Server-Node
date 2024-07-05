@@ -25,7 +25,7 @@ class CartManager {
     try {
       const data = await fs.promises.readFile(this.filePath, "utf-8");
       const carts = JSON.parse(data);
-      return carts.find(cart => cart.id === cartId);
+      return carts.find(cart => Number(cart.id) == Number(cartId));
     } catch (error) {
       console.error("Error reading cart:", error);
       return null;
@@ -39,6 +39,28 @@ class CartManager {
     } catch (error) {
       console.error("Error reading carts:", error);
       return [];
+    }
+  }
+
+  async addProductToCart(cartId, productId) {
+    try {
+      const data = await fs.promises.readFile(this.filePath, "utf-8");
+      const carts = JSON.parse(data);
+      const cart = carts.find(cart => Number(cart.id) == Number(cartId));
+      if (cart) {
+        const productIndex = cart.products.findIndex(product => product.id === productId);
+        if (productIndex !== -1) {
+          cart.products[productIndex].quantity += 1;
+        } else {
+          cart.products.push({ id: productId, quantity: 1 });
+        }
+        await fs.promises.writeFile(this.filePath, JSON.stringify(carts, null, 2));
+        return cart;
+      }
+      return null;
+    } catch (error) {
+      console.error("Error adding product to cart:", error);
+      return null;
     }
   }
 }

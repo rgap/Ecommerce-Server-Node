@@ -26,5 +26,19 @@
       "images/taladro_electrico_1.jpg",
       "images/taladro_electrico_2.jpg"
     ]
+  },
+  {
+    "id": "1720152224168",
+    "title": "Llave Inglesa Ajustable",
+    "description": "Llave inglesa ajustable de acero forjado con mango antideslizante, ideal para trabajos de fontanería.",
+    "code": "LLV1",
+    "price": 15.49,
+    "status": true,
+    "stock": 75,
+    "category": "Herramientas Manuales",
+    "thumbnails": [
+      "images/llave_inglesa_1.jpg",
+      "images/llave_inglesa_2.jpg"
+    ]
   }
 ]

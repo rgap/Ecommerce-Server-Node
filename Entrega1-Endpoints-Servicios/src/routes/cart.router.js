@@ -17,9 +17,9 @@ router.post("/", async (req, res) => {
     res.status(500).json({ message: "Error creating cart" });
   }
 });
-router.get("/:cartId", async (req, res) => {
-  const { cartId } = req.params;
-  const cart = await cartManager.getCartById(cartId);
+router.get("/:cid", async (req, res) => {
+  const { cid } = req.params;
+  const cart = await cartManager.getCartById(cid);
   if (cart) {
     res.json(cart);
   } else {
@@ -27,9 +27,9 @@ router.get("/:cartId", async (req, res) => {
   }
 });
 
-router.post("/:cartId/product/:productId", async (req, res) => {
-  const { cartId, productId } = req.params;
-  const cart = await cartManager.addProductToCart(cartId, productId);
+router.post("/:cid/product/:pid", async (req, res) => {
+  const { cid, pid } = req.params;
+  const cart = await cartManager.addProductToCart(cid, pid);
   if (cart) {
     res.json(cart);
   } else {

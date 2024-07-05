@@ -10,9 +10,9 @@ router.get("/", async (req, res) => {
   res.json(products);
 });
 
-router.get("/:productId", async (req, res) => {
-  const { productId } = req.params;
-  const product = await productManager.getProductById(productId);
+router.get("/:pid", async (req, res) => {
+  const { pid } = req.params;
+  const product = await productManager.getProductById(pid);
   if (product) {
     res.json(product);
   } else {
@@ -26,10 +26,10 @@ router.post("/", async (req, res) => {
   res.status(201).json(createdProduct);
 });
 
-router.put("/:productId", async (req, res) => {
-  const { productId } = req.params;
+router.put("/:pid", async (req, res) => {
+  const { pid } = req.params;
   const updatedProduct = req.body;
-  const product = await productManager.updateProduct(productId, updatedProduct);
+  const product = await productManager.updateProduct(pid, updatedProduct);
   if (product) {
     res.json(product);
   } else {
@@ -37,9 +37,9 @@ router.put("/:productId", async (req, res) => {
   }
 });
 
-router.delete("/:productId", async (req, res) => {
-  const { productId } = req.params;
-  const success = await productManager.deleteProduct(productId);
+router.delete("/:pid", async (req, res) => {
+  const { pid } = req.params;
+  const success = await productManager.deleteProduct(pid);
   if (success) {
     res.json({ message: "Product deleted" });
   } else {

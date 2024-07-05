@@ -18,9 +18,9 @@
     "title": "Taladro Eléctrico",
     "description": "Taladro eléctrico de 600W con función percutora. Incluye un set de brocas para diferentes materiales.",
     "code": "DRL1",
-    "price": 79.99,
+    "price": 49.99,
     "status": true,
-    "stock": 30,
+    "stock": 29,
     "category": "Herramientas Eléctricas",
     "thumbnails": [
       "images/taladro_electrico_1.jpg",

@@ -21,11 +21,12 @@ class ProductManager {
     }
   }
 
-  async getProductById(pid) {
+  async getProductById(productId) {
     try {
       const data = await fs.promises.readFile(this.filePath, "utf-8");
       const products = JSON.parse(data);
-      return products.find(product => product.id === pid);
+      const productFound = products.find(product => product.id === Number(productId));
+      return productFound;
     } catch (error) {
       console.error("Error reading product:", error);
       return null;
@@ -46,11 +47,11 @@ class ProductManager {
     }
   }
 
-  async updateProduct(pid, updatedProduct) {
+  async updateProduct(productId, updatedProduct) {
     try {
       const data = await fs.promises.readFile(this.filePath, "utf-8");
       const products = JSON.parse(data);
-      const index = products.findIndex(product => product.id === pid);
+      const index = products.findIndex(product => product.id === Number(productId));
       if (index !== -1) {
         products[index] = { ...products[index], ...updatedProduct };
         await fs.promises.writeFile(this.filePath, JSON.stringify(products, null, 2));
@@ -63,11 +64,11 @@ class ProductManager {
     }
   }
 
-  async deleteProduct(pid) {
+  async deleteProduct(productId) {
     try {
       const data = await fs.promises.readFile(this.filePath, "utf-8");
       let products = JSON.parse(data);
-      products = products.filter(product => product.id !== pid);
+      products = products.filter(product => product.id !== Number(productId));
       await fs.promises.writeFile(this.filePath, JSON.stringify(products, null, 2));
       return true;
     } catch (error) {

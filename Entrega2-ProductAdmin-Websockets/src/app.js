@@ -5,6 +5,7 @@ import cartRouter from "./routes/api/cart.router.js";
 import productRouter from "./routes/api/product.router.js";
 import adminRouter from "./routes/views/admin.router.js";
 import { __dirname } from "./utils/pathHelper.js";
+console.log("__dirname", __dirname);
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Handlebars setup
 app.engine("handlebars", handlebars.engine());
 app.set("view engine", "handlebars");
-app.set("views", path.join(__dirname, "src/views"));
+app.set("views", path.join(__dirname, "views"));
 
 // Routes
 app.use("/api/products", productRouter);

@@ -1,5 +1,7 @@
-import { dirname } from "node:path";
+import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
-export const __dirname = dirname(__filename);
+const currentDir = dirname(__filename);
+// This will return the src folder path
+export const __dirname = join(currentDir, "..");

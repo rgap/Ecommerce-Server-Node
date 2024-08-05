@@ -4,7 +4,7 @@ import { __dirname } from "../utils/pathHelper.js";
 
 class CartManager {
   constructor() {
-    this.filePath = path.join(__dirname, "public/data/carts.json");
+    this.filePath = path.join(__dirname, "data/carts.json");
   }
 
   async createCart() {

@@ -60,5 +60,39 @@
     "title": "Taladro simple",
     "price": "18",
     "description": "sin descripcion"
+  },
+  {
+    "id": "1722900042789",
+    "title": "Taladro Eléctrico",
+    "description": "Taladro eléctrico de 600W con función percutora. Incluye un set de brocas para diferentes materiales.",
+    "code": "DRL1",
+    "price": 79.99,
+    "status": true,
+    "stock": 30,
+    "category": "Herramientas Eléctricas",
+    "thumbnails": [
+      "images/taladro_electrico_1.jpg",
+      "images/taladro_electrico_2.jpg"
+    ]
+  },
+  {
+    "id": "1722900043409",
+    "title": "Taladro Eléctrico",
+    "description": "Taladro eléctrico de 600W con función percutora. Incluye un set de brocas para diferentes materiales.",
+    "code": "DRL1",
+    "price": 79.99,
+    "status": true,
+    "stock": 30,
+    "category": "Herramientas Eléctricas",
+    "thumbnails": [
+      "images/taladro_electrico_1.jpg",
+      "images/taladro_electrico_2.jpg"
+    ]
+  },
+  {
+    "id": "1722902138664",
+    "title": "asfas",
+    "price": "12",
+    "description": "asfasfsaf"
   }
 ]

@@ -3,9 +3,9 @@ import handlebars from "express-handlebars";
 import path from "path";
 import cartRouter from "./routes/api/cart.router.js";
 import productRouter from "./routes/api/product.router.js";
-import adminRouter from "./routes/views/admin.router.js";
+import HomeRouter from "./routes/views/home.router.js";
+import RealTimeProductsRouter from "./routes/views/realtimeproducts.router.js";
 import { __dirname } from "./utils/pathHelper.js";
-console.log("__dirname", __dirname);
 
 const app = express();
 
@@ -24,15 +24,9 @@ app.use("/api/products", productRouter);
 app.use("/api/cart", cartRouter);
 
 // Home route
-app.use("/admin", adminRouter);
+app.use("/", HomeRouter);
 
-app.get("/", (req, res) => {
-  try {
-    res.render("home");
-  } catch (error) {
-    console.error("Error rendering home page:", error);
-    res.status(500).send("Internal Server Error");
-  }
-});
+// RealTimeProducts route
+app.use("/realtimeproducts", RealTimeProductsRouter);
 
 export default app;

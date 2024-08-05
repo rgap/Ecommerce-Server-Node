@@ -5,7 +5,7 @@ const router = Router();
 const productManager = new ProductManager();
 
 // Lista de productos en tiempo real
-router.get("/realtimeproducts", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     // Productos de la base de datos
     const products = await productManager.getAllProducts();

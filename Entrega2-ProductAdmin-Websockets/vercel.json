@@ -19,5 +19,8 @@
       "src": "/(.*)",
       "dest": "/index.js"
     }
-  ]
+  ],
+  "env": {
+    "VIEWS_DIR": "/var/task/src/views"
+  }
 }

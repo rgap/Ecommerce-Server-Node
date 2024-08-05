@@ -4,7 +4,7 @@ import { __dirname } from "../utils/pathHelper.js";
 
 class ProductManager {
   constructor() {
-    this.filePath = path.join(__dirname, "data/products.json");
+    this.filePath = path.join(__dirname, "public/data/products.json");
   }
 
   async getAllProducts(limit) {

@@ -1,0 +1,64 @@
+[
+  {
+    "id": 2,
+    "title": "Taladro Eléctrico",
+    "description": "Taladro eléctrico de 600W con función percutora. Incluye un set de brocas para diferentes materiales.",
+    "code": "DRL1",
+    "price": 49.99,
+    "status": true,
+    "stock": 29,
+    "category": "Herramientas Eléctricas",
+    "thumbnails": [
+      "images/taladro_electrico_1.jpg",
+      "images/taladro_electrico_2.jpg"
+    ]
+  },
+  {
+    "id": "1720152224168",
+    "title": "Llave Inglesa Ajustable",
+    "description": "Llave inglesa ajustable de acero forjado con mango antideslizante, ideal para trabajos de fontanería.",
+    "code": "LLV1",
+    "price": 15.49,
+    "status": true,
+    "stock": 75,
+    "category": "Herramientas Manuales",
+    "thumbnails": [
+      "images/llave_inglesa_1.jpg",
+      "images/llave_inglesa_2.jpg"
+    ]
+  },
+  {
+    "id": "1720152643716",
+    "title": "Taladro Eléctrico",
+    "description": "Taladro eléctrico de 600W con función percutora. Incluye un set de brocas para diferentes materiales.",
+    "code": "DRL1",
+    "price": 79.99,
+    "status": true,
+    "stock": 30,
+    "category": "Herramientas Eléctricas",
+    "thumbnails": [
+      "images/taladro_electrico_1.jpg",
+      "images/taladro_electrico_2.jpg"
+    ]
+  },
+  {
+    "id": "1720152649407",
+    "title": "Taladro Eléctrico",
+    "description": "Taladro eléctrico de 600W con función percutora. Incluye un set de brocas para diferentes materiales.",
+    "code": "DRL1",
+    "price": 79.99,
+    "status": true,
+    "stock": 30,
+    "category": "Herramientas Eléctricas",
+    "thumbnails": [
+      "images/taladro_electrico_1.jpg",
+      "images/taladro_electrico_2.jpg"
+    ]
+  },
+  {
+    "id": "1722892461034",
+    "title": "Taladro simple",
+    "price": "18",
+    "description": "sin descripcion"
+  }
+]

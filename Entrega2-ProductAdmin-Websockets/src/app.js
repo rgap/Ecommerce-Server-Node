@@ -26,7 +26,12 @@ app.use("/api/cart", cartRouter);
 app.use("/admin", adminRouter);
 
 app.get("/", (req, res) => {
-  res.render("home");
+  try {
+    res.render("home");
+  } catch (error) {
+    console.error("Error rendering home page:", error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 export default app;

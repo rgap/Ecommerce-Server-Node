@@ -26,7 +26,7 @@ app.use("/api/cart", cartRouter);
 app.use("/admin", adminRouter);
 
 app.get("/", (req, res) => {
-  res.render("home", { title: "Home Page" });
+  res.render("home");
 });
 
 export default app;

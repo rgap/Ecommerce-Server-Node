@@ -1,3 +1,5 @@
+# Coderhouse - Rel Guzman
+
 ## Descripción
 
 Una API de pruebas que permite gestionar productos y carritos de compras

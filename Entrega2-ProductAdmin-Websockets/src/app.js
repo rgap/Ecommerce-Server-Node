@@ -21,7 +21,7 @@ app.set("views", path.join(__dirname, "views"));
 
 // Routes
 app.use("/api/products", productRouter);
-app.use("/api/cart", cartRouter);
+app.use("/api/carts", cartRouter);
 
 // Home route
 app.use("/", HomeRouter);

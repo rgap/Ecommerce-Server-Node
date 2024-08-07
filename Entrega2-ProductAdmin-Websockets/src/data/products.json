@@ -26,5 +26,19 @@
       "images/llave_inglesa_1.jpg",
       "images/llave_inglesa_2.jpg"
     ]
+  },
+  {
+    "id": 1,
+    "title": "Martillo de Uña",
+    "description": "Martillo de uña con mango de madera, ideal para clavar y extraer clavos. Cabeza de acero de alta calidad.",
+    "code": "HAM1",
+    "price": 12.99,
+    "status": true,
+    "stock": 50,
+    "category": "Herramientas Manuales",
+    "thumbnails": [
+      "images/martillo_unia_1.jpg",
+      "images/martillo_unia_2.jpg"
+    ]
   }
 ]

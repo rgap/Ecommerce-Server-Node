@@ -6,9 +6,10 @@ const socket = io();
 socket.on("productAdded", product => {
   const productList = document.getElementById("product-list");
 
-  // Crear un nuevo elemento de producto
+  // Crear un nuevo elemento de tarjeta de producto
   const productCard = document.createElement("div");
   productCard.className = "bg-white shadow-md rounded-lg overflow-hidden";
+  productCard.id = product.id; // Asignar el ID del producto
 
   productCard.innerHTML = `
     <div class="p-4">
@@ -22,7 +23,7 @@ socket.on("productAdded", product => {
     </div>
   `;
 
-  // Agregar el producto al DOM
+  // Agregar la nueva tarjeta de producto al DOM
   productList.appendChild(productCard);
 });
 

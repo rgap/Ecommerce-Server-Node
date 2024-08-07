@@ -17,9 +17,7 @@ export const initSocket = server => {
     socket.on("addProduct", async product => {
       try {
         const savedProduct = await productManager.addProduct(product);
-        if (savedProduct) {
-          socketServer.emit("productAdded", savedProduct);
-        }
+        socketServer.emit("productAdded", savedProduct);
       } catch (error) {
         console.error("Error adding product:", error);
       }
@@ -28,10 +26,8 @@ export const initSocket = server => {
     // Al borrar un producto desde el cliente
     socket.on("removeProduct", async productId => {
       try {
-        const success = await productManager.deleteProduct(productId);
-        if (success) {
-          socketServer.emit("productRemoved", productId);
-        }
+        await productManager.deleteProduct(productId);
+        socketServer.emit("productRemoved", productId);
       } catch (error) {
         console.error("Error removing product:", error);
       }

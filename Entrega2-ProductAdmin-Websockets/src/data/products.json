@@ -26,5 +26,185 @@
       "images/llave_inglesa_1.jpg",
       "images/llave_inglesa_2.jpg"
     ]
+  },
+  {
+    "id": "1722988003187",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988003913",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988004929",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988006043",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988006837",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988007781",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988008822",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988009512",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988010097",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988010677",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988012837",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988015159",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988017329",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988018958",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722988020450",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722990675993",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722990681860",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722990687807",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722990693450",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
+  },
+  {
+    "id": "1722990699278",
+    "title": "Llave Inglesa",
+    "price": 29.99,
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": 50,
+    "status": true
   }
 ]

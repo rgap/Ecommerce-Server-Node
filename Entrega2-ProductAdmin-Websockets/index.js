@@ -6,8 +6,11 @@ const PORT = process.env.PORT || 8080;
 
 const server = http.createServer(app);
 
-// Initialize one socket
-initSocket(server);
+// Inicializar el servidor de Socket.io
+const socketServer = initSocket(server);
+
+// Agregar el servidor de Socket.io a la aplicación
+app.set("io", socketServer);
 
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

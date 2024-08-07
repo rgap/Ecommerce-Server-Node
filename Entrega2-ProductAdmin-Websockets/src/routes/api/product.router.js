@@ -1,3 +1,4 @@
+// src/routes/api/product.router.js
 import { Router } from "express";
 import ProductManager from "../../managers/ProductManager.js";
 
@@ -23,7 +24,12 @@ router.get("/:pid", async (req, res) => {
 router.post("/", async (req, res) => {
   const newProduct = req.body;
   const createdProduct = await productManager.addProduct(newProduct);
-  res.status(201).json(createdProduct);
+  if (createdProduct) {
+    req.io.emit("productAdded", createdProduct); // Emit the event using Socket.io
+    res.status(201).json(createdProduct);
+  } else {
+    res.status(500).json({ message: "Error adding product" });
+  }
 });
 
 router.put("/:pid", async (req, res) => {
@@ -41,6 +47,7 @@ router.delete("/:pid", async (req, res) => {
   const { pid } = req.params;
   const success = await productManager.deleteProduct(pid);
   if (success) {
+    req.io.emit("productRemoved", pid); // Emit the event using Socket.io
     res.json({ message: "Product deleted" });
   } else {
     res.status(404).json({ message: "Product not found" });

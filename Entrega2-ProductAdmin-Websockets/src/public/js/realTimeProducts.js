@@ -1,14 +1,15 @@
 const socket = io();
 
-///////////////////////// Add Product /////////////////////////
+///////////////////////// Agregar Producto /////////////////////////
 
-// Al agregar un producto
+// Escuchar el evento "productAdded" del servidor
 socket.on("productAdded", product => {
   const productList = document.getElementById("product-list");
 
-  // Crear un nuevo elemento de producto
+  // Crear un nuevo elemento de tarjeta de producto
   const productCard = document.createElement("div");
   productCard.className = "bg-white shadow-md rounded-lg overflow-hidden";
+  productCard.id = product.id; // Asignar el ID del producto
 
   productCard.innerHTML = `
     <div class="p-4">
@@ -22,50 +23,74 @@ socket.on("productAdded", product => {
     </div>
   `;
 
-  // Agregar el producto al DOM
+  // Agregar la nueva tarjeta de producto al DOM
   productList.appendChild(productCard);
 });
 
-// Accion del formulario de agregar producto
-document.getElementById("product-form").addEventListener("submit", event => {
-  event.preventDefault();
+///////////////////////// Eliminar Producto /////////////////////////
 
-  // Atributos del producto a agregar
-  const title = document.getElementById("title").value;
-  const price = document.getElementById("price").value;
-  const description = document.getElementById("description").value;
-  const category = document.getElementById("category").value;
-  const stock = document.getElementById("stock").value;
-  const status = document.getElementById("status").value;
-
-  // Emitir evento al servidor
-  socket.emit("addProduct", { title, price, description, category, stock, status });
-
-  // Resetear formulario
-  document.getElementById("product-form").reset();
-});
-
-///////////////////////// Remove Product /////////////////////////
-
-// Al eliminar un producto por ID
-socket.on("productRemoved", function (removedProductId) {
-  // Remove the product from the DOM
+// Escuchar el evento "productRemoved" del servidor
+socket.on("productRemoved", removedProductId => {
+  // Encontrar el elemento del producto por ID y eliminarlo del DOM
   const productElement = document.getElementById(removedProductId);
   if (productElement) {
     productElement.remove();
   }
 });
 
-// Accion del formulario de eliminar producto
+///////////////////////// Acciones de Formulario /////////////////////////
+
+// Formulario para agregar un producto
+document.getElementById("product-form").addEventListener("submit", event => {
+  event.preventDefault();
+
+  // Recopilar los detalles del producto desde el formulario
+  const title = document.getElementById("title").value;
+  const price = parseFloat(document.getElementById("price").value);
+  const description = document.getElementById("description").value;
+  const category = document.getElementById("category").value;
+  const stock = parseInt(document.getElementById("stock").value, 10);
+  const status = document.getElementById("status").value === "true";
+
+  // Enviar los datos del producto al servidor usando una solicitud HTTP
+  fetch("/api/products", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ title, price, description, category, stock, status }),
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data) {
+        console.log("Producto agregado exitosamente:", data);
+      }
+    })
+    .catch(error => console.error("Error al agregar el producto:", error));
+
+  // Resetear el formulario
+  document.getElementById("product-form").reset();
+});
+
+// Formulario para eliminar un producto
 document.getElementById("remove-product-form").addEventListener("submit", event => {
   event.preventDefault();
 
-  // ID del producto a eliminar
+  // Obtener el ID del producto a eliminar
   const productId = document.getElementById("productId").value;
 
-  // Emitir evento al servidor
-  socket.emit("removeProduct", productId);
+  // Enviar la solicitud de eliminación al servidor usando una solicitud HTTP
+  fetch(`/api/products/${productId}`, {
+    method: "DELETE",
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.message === "Product deleted") {
+        console.log("Producto eliminado exitosamente");
+      }
+    })
+    .catch(error => console.error("Error al eliminar el producto:", error));
 
-  // Resetear formulario
+  // Resetear el formulario
   document.getElementById("remove-product-form").reset();
 });

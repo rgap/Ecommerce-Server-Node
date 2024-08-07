@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "2931a7ac-b1fc-4f65-b9b8-d40a5c32753f",
+		"name": "Entrega-API-Endpoints",
+		"description": "Collection of API endpoints for My Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "613062"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "List all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all products (limit)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products?limit=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products/:pid",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								":pid"
+							],
+							"variable": [
+								{
+									"key": "pid",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new product_1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"title\": \"Martillo de Uña\",\n  \"description\": \"Martillo de uña con mango de madera, ideal para clavar y extraer clavos. Cabeza de acero de alta calidad.\",\n  \"code\": \"HAM1\",\n  \"price\": 12.99,\n  \"status\": true,\n  \"stock\": 50,\n  \"category\": \"Herramientas Manuales\",\n  \"thumbnails\": [\n    \"images/martillo_unia_1.jpg\",\n    \"images/martillo_unia_2.jpg\"\n  ]\n}\n"
+						},
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new product_2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Taladro Eléctrico\",\n  \"description\": \"Taladro eléctrico de 600W con función percutora. Incluye un set de brocas para diferentes materiales.\",\n  \"code\": \"DRL1\",\n  \"price\": 79.99,\n  \"status\": true,\n  \"stock\": 30,\n  \"category\": \"Herramientas Eléctricas\",\n  \"thumbnails\": [\n    \"images/taladro_electrico_1.jpg\",\n    \"images/taladro_electrico_2.jpg\"\n  ]\n}\n"
+						},
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new product_3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Llave Inglesa Ajustable\",\n  \"description\": \"Llave inglesa ajustable de acero forjado con mango antideslizante, ideal para trabajos de fontanería.\",\n  \"code\": \"LLV1\",\n  \"price\": 15.49,\n  \"status\": true,\n  \"stock\": 75,\n  \"category\": \"Herramientas Manuales\",\n  \"thumbnails\": [\n    \"images/llave_inglesa_1.jpg\",\n    \"images/llave_inglesa_2.jpg\"\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"price\":49.99,\n  \"stock\": 9\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/products/:pid",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								":pid"
+							],
+							"variable": [
+								{
+									"key": "pid",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products/:pid",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								":pid"
+							],
+							"variable": [
+								{
+									"key": "pid",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carts",
+			"item": [
+				{
+					"name": "List all carts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/carts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/carts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cart by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/carts/:cid",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"carts",
+								":cid"
+							],
+							"variable": [
+								{
+									"key": "cid",
+									"value": "1720151230899"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add product to cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/carts/:cid/product/:pid",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"carts",
+								":cid",
+								"product",
+								":pid"
+							],
+							"variable": [
+								{
+									"key": "cid",
+									"value": "1720151230899"
+								},
+								{
+									"key": "pid",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080/api"
+		}
+	]
+}

@@ -1,0 +1,143 @@
+[
+  {
+    "id": 2,
+    "title": "Taladro Eléctrico",
+    "description": "Taladro eléctrico de 600W con función percutora. Incluye un set de brocas para diferentes materiales.",
+    "code": "DRL1",
+    "price": 49.99,
+    "status": true,
+    "stock": 29,
+    "category": "Herramientas Eléctricas",
+    "thumbnails": [
+      "images/taladro_electrico_1.jpg",
+      "images/taladro_electrico_2.jpg"
+    ]
+  },
+  {
+    "id": "1720152224168",
+    "title": "Llave Inglesa Ajustable",
+    "description": "Llave inglesa ajustable de acero forjado con mango antideslizante, ideal para trabajos de fontanería.",
+    "code": "LLV1",
+    "price": 15.49,
+    "status": true,
+    "stock": 75,
+    "category": "Herramientas Manuales",
+    "thumbnails": [
+      "images/llave_inglesa_1.jpg",
+      "images/llave_inglesa_2.jpg"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Martillo de Uña",
+    "description": "Martillo de uña con mango de madera, ideal para clavar y extraer clavos. Cabeza de acero de alta calidad.",
+    "code": "HAM1",
+    "price": 12.99,
+    "status": true,
+    "stock": 50,
+    "category": "Herramientas Manuales",
+    "thumbnails": [
+      "images/martillo_unia_1.jpg",
+      "images/martillo_unia_2.jpg"
+    ]
+  },
+  {
+    "id": "1722998081948",
+    "title": "Llave Inglesa",
+    "price": "29.99",
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": "50",
+    "status": "true"
+  },
+  {
+    "id": "1722998082146",
+    "title": "Llave Inglesa",
+    "price": "29.99",
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": "50",
+    "status": "true"
+  },
+  {
+    "id": "1722998082359",
+    "title": "Llave Inglesa",
+    "price": "29.99",
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": "50",
+    "status": "true"
+  },
+  {
+    "id": "1722998082545",
+    "title": "Llave Inglesa",
+    "price": "29.99",
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": "50",
+    "status": "true"
+  },
+  {
+    "id": "1722998082731",
+    "title": "Llave Inglesa",
+    "price": "29.99",
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": "50",
+    "status": "true"
+  },
+  {
+    "id": "1722998082898",
+    "title": "Llave Inglesa",
+    "price": "29.99",
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": "50",
+    "status": "true"
+  },
+  {
+    "id": "1722998083080",
+    "title": "Llave Inglesa",
+    "price": "29.99",
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": "50",
+    "status": "true"
+  },
+  {
+    "id": "1722998084114",
+    "title": "Llave Inglesa",
+    "price": "29.99",
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": "50",
+    "status": "true"
+  },
+  {
+    "id": "1722998087647",
+    "title": "Llave Inglesa",
+    "price": "29.99",
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": "50",
+    "status": "true"
+  },
+  {
+    "id": "1722998087800",
+    "title": "Llave Inglesa",
+    "price": "29.99",
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": "50",
+    "status": "true"
+  },
+  {
+    "id": "1722998087948",
+    "title": "Llave Inglesa",
+    "price": "29.99",
+    "description": "Llave inglesa ajustable de acero.",
+    "category": "Herramientas",
+    "stock": "50",
+    "status": "true"
+  }
+]

@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# vscode
+.vscode
+
+# Temporal folder
+tmp/
+
+# Ignore node_modules directory
+node_modules/

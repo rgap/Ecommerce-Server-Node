@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use("/api/products", productRouter);
-app.use("/api/cart", cartRouter);
+app.use("/api/carts", cartRouter);
 
 // Home route
 app.use("/", HomeRouter);
